@@ -36,11 +36,22 @@ app.get(`/random-beer`, (req, res) => {
   punkAPI
     .getRandom()
     .then(response => {
+      console.log(response);
       res.render(`random-beer.hbs`, response[0]);
     })
     .catch(err => {
       console.log(err);
     });
 });
-
+app.get(`/beer/:id`, (req, res) => {
+  punkAPI
+    .getBeer(req.params.id)
+    .then(response => {
+      console.log(response);
+      res.render(`singleBeer.hbs`, response[0]);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
 app.listen(3000, () => console.log('🏃‍ on port 3000'));
