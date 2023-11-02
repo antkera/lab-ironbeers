@@ -46,14 +46,17 @@ footer h4 {
   width: 450px;
 }
 .btn {
-  margin: 20px;
-  background-color: #2081c3;
-  padding: 10px;
-}
-.btn a {
   text-decoration: none;
   color: #f7f9f9;
+  margin: 15px;
+  background-color: #2081c3;
+  border-width: 2px;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
 }
+
 #all-beer {
   display: flex;
   flex-wrap: wrap;
